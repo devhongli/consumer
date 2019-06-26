@@ -9,7 +9,4 @@ spring:
     name: consumer-client
 
 # To disable Hystrix in Feign
-#feign:
-#  hystrix:
-#    enabled: false
-
+feign.hystrix.enabled: true

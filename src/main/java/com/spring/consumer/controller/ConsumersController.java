@@ -19,7 +19,7 @@ public class ConsumersController {
 
     @RequestMapping("/home")
     public String home(@RequestParam String name) {
-        return  name + "i am from port:" + port;
+        return  producerServices.home(name);
     }
 
     @RequestMapping(value = "/hi")
