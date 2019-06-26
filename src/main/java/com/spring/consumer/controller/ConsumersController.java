@@ -14,14 +14,8 @@ public class ConsumersController {
     @Value("${server.port}")
     String port;
 
-//    @Autowired
-//    HelloService helloService;
-
     @Autowired
     ProducerServices producerServices;
-
-//    @Autowired
-//    RestTemplate restTemplate;
 
     @RequestMapping("/home")
     public String home(@RequestParam String name) {
@@ -31,11 +25,8 @@ public class ConsumersController {
     @RequestMapping(value = "/hi")
     public String hi(@RequestParam String custno) {
         return producerServices.queryCustInfo(custno);
-        //return helloService.hiService(name);
     }
 
 
-//    public String hiService(String name) {
-//        return restTemplate.getForObject("http://producer-service/queryCustInfo?custNo="+custNo,String.class);
-//    }
+
 }

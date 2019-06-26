@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @FeignClient(value = "producer-service")
 public interface  ProducerServices {
-    @RequestMapping(value = "/producers-service/queryCustInfo" ,method = RequestMethod.GET)
+    @RequestMapping(value = "/V1/custService/queryCustInfo" ,method = RequestMethod.POST)
     String queryCustInfo(@RequestParam(value = "custno") String custno);
 }
